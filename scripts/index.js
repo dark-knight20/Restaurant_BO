@@ -1,14 +1,12 @@
 testCredentials = {
     'users': [
         {
-            'id': 1,
             'username': 'joel',
             'password': 'joel@123',
             'adderss': 'kochi',
             'phone_no': 9098544212
         },
         {
-            'id': 2,
             'username': 'gopika',
             'password': 'gopika@123',
             'adderss': 'trivandrum',
