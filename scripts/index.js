@@ -1,21 +1,3 @@
-testCredentials = {
-    'users': [
-        {
-            'username': 'joel',
-            'password': 'joel@123',
-            'adderss': 'kochi',
-            'phone_no': 9098544212
-        },
-        {
-            'username': 'gopika',
-            'password': 'gopika@123',
-            'adderss': 'trivandrum',
-            'phone_no': 9098544212
-        }
-    ]
-
-}
-
 function checkUser() {
     let res = false;
     console.log("user authentication triggered");
