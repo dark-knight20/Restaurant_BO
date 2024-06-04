@@ -6,7 +6,7 @@ function changePassword(username)
     {
         if(username==user.username)
             {
-                if(document.getElementById('').value==user.password)
+                if(document.getElementById('').value==user.phn_number)
                     {
                         user.password=newPassword;
                     }
