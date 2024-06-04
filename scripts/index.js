@@ -19,8 +19,8 @@ testCredentials = {
 function checkUser() {
     let res = false;
     console.log("user authentication triggered");
-    // credentials=localStorage.getItem('');
-    for (user of testCredentials['users']) {
+    credentials=localStorage.getItem('');
+    for (user of credentials['users']) {
         console.log(user.username);
         if (document.getElementById('username').value === user.username) {
             if (document.getElementById('password').value === user.password) {
