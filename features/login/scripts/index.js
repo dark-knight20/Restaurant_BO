@@ -1,7 +1,7 @@
 function checkUser() {
     let res = false;
     console.log("user authentication triggered");
-    credentials=localStorage.getItem('');
+    credentials=localStorage.getItem('credentials');
     for (user of credentials['users']) {
         console.log(user.username);
         if (document.getElementById('username').value === user.username) {
