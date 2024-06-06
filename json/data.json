@@ -18,7 +18,7 @@
         },
         {
             "id": 3,
-            "title": "Biryani",
+            "title": " Beef Biryani",
             "description": "Fragrant basmati rice cooked with aromatic spices and choice of meat such as chicken, mutton, or beef.",
             "price": 180,
             "image": "biryani.jpg",
@@ -168,16 +168,9 @@
             "image": "aloo_matar.jpg",
             "type": "Vegetarian"
           },
+          
           {
             "id": 22,
-            "title": "Fish Curry",
-            "description": "Fish cooked in a spicy and tangy curry with coconut milk and tamarind.",
-            "price": 180,
-            "image": "fish_curry.jpg",
-            "type": "Non-Veg"
-          },
-          {
-            "id": 23,
             "title": "Chicken Biryani",
             "description": "Fragrant basmati rice cooked with marinated chicken pieces, spices, and herbs.",
             "price": 190,
@@ -185,7 +178,7 @@
             "type": "Non-Veg"
           },
           {
-            "id": 24,
+            "id": 23,
             "title": "Paneer Tikka",
             "description": "Paneer cubes marinated in a spiced yogurt mixture and grilled until charred and smoky.",
             "price": 150,
@@ -193,7 +186,7 @@
             "type": "Vegetarian"
           },
           {
-            "id": 25,
+            "id": 24,
             "title": "Egg Curry",
             "description": "Hard-boiled eggs cooked in a rich and flavorful gravy with onions, tomatoes, and spices.",
             "price": 150,
