@@ -19,7 +19,7 @@ let testCredentials = {
 }
 function changePassword() {
     let userTest = false;
-    let credentials = localStorage.getItem('credentials');
+    let credentials = JSON.parse(localStorage.getItem('credentials'));
     let newPassword = document.getElementById('new_password').value;
     let username = document.getElementById('username').value;
     let phoneNumber = document.getElementById('phone_number').value;
@@ -30,7 +30,7 @@ function changePassword() {
                 user.password = newPassword;
                 localStorage.setItem('credentials', JSON.stringify(credentials));
                 alert("password changed!")
-                window.location.href = 'index.html';
+                window.location.href = '../login/index.html';
             }
             else {
                 // alert("There is no such registered phone number");
