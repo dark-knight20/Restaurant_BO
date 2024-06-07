@@ -1,0 +1,53 @@
+.container{
+    
+    /* background: url('/assets/pexels-jonathanborba-2983101.jpg'); */
+    background-color: rgb(102, 39, 39);
+    /* background-repeat: no-repeat;
+    background-size: contain;
+    background-size: cover; */
+
+}
+:root {
+    --bs-card-bg: #b04141; 
+  }
+header{
+    padding: 20px;
+}
+.card{
+    margin: 2em;
+    background-color: rgb(231, 192, 120) !important ;
+    display: flex;
+    flex-direction: row !important;
+    background-color: wheat;
+}
+
+button{
+    outline: none;
+    border: none;
+}
+
+h2{
+    margin-left: 1em;
+    color: #ede9e9;
+}
+h5{
+    color: #b75454;
+}
+
+img{
+    height: 100%;    
+    width: 100%;
+}
+.card-body span{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+
+@media (max-width: 1000px) {
+    .card {
+      width: 250px;
+    }
+    
+  }
