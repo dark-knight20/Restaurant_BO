@@ -18,7 +18,7 @@ background-size:cover;
 
 .login-card{
     width: 30vw;
-    height: 62vh;
+    height: 68vh;
     background-color: rgba(255, 255, 255);
     border-radius: 15%;
     opacity: 0.7;
@@ -56,4 +56,12 @@ a{
 }
 .user-password{
     justify-content: space-between;
+}
+.signup-div{
+    margin-top: 25px;
+    text-align: center;
+}
+.dont-have-account{
+    margin-bottom: 0px;
+    font-size:13px ;
 }
