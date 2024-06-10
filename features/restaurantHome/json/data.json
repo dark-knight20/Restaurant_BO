@@ -1,0 +1,401 @@
+{
+  "main-course": [
+      {
+          "id": 1,
+          "title": "Chicken Tikka Masala",
+          "description": "Grilled chicken pieces cooked in a creamy tomato-based sauce with spices.",
+          "price": 150,
+          "image": "https://th.bing.com/th/id/R.bd6f8c8d7023deae1fe812e997f8b50e?rik=foUu1y03s6cqTw&riu=http%3a%2f%2fimages.bigoven.com%2fimage%2fupload%2fv1442508954%2fhealthy-chicken-tikka-masala-9443a3.jpg&ehk=Vc%2f86qe33ECqKM6iRSob5Rm%2b8XfFbz%2fXTTIbJ7KozKc%3d&risl=1&pid=ImgRaw&r=0",
+          "type": "Non-Veg"
+      },
+      {
+          "id": 2,
+          "title": "Paneer Butter Masala",
+          "description": "Soft paneer cubes cooked in a rich and creamy tomato-based gravy.",
+          "price": 120,
+          "image": "paneer_butter_masala.jpg",
+          "type": "Vegetarian"
+      },
+      {
+          "id": 3,
+          "title": " Beef Biryani",
+          "description": "Fragrant basmati rice cooked with aromatic spices and choice of meat such as chicken, mutton, or beef.",
+          "price": 180,
+          "image": "biryani.jpg",
+          "type": "Non-Veg"
+      },
+      {
+          "id": 4,
+          "title": "Dal Makhani",
+          "description": "Creamy lentils slow-cooked with tomatoes, onions, and spices, finished with cream and butter.",
+          "price": 100,
+          "image": "dal_makhani.jpg",
+          "type": "Vegetarian"
+      },
+      {
+          "id": 5,
+          "title": "Rogan Josh",
+          "description": "Tender lamb or goat meat cooked in a rich and flavorful gravy with aromatic spices.",
+          "price": 200,
+          "image": "rogan_josh.jpg",
+          "type": "Non-Veg"
+      },
+      {
+          "id": 6,
+          "title": "Chole Bhature",
+          "description": "Spicy chickpea curry served with deep-fried bread.",
+          "price": 90,
+          "image": "chole_bhature.jpg",
+          "type": "Vegetarian"
+      },
+      {
+          "id": 7,
+          "title": "Tandoori Chicken",
+          "description": "Chicken marinated in yogurt and spices, cooked in a clay oven.",
+          "price": 160,
+          "image": "tandoori_chicken.jpg",
+          "type": "Non-Veg"
+      },
+      {
+          "id": 8,
+          "title": "Palak Paneer",
+          "description": "Soft paneer cubes cooked in a creamy spinach gravy.",
+          "price": 130,
+          "image": "palak_paneer.jpg",
+          "type": "Vegetarian"
+      },
+      {
+          "id": 9,
+          "title": "Aloo Gobi",
+          "description": "Potatoes and cauliflower cooked with onions, tomatoes, and spices.",
+          "price": 110,
+          "image": "aloo_gobi.jpg",
+          "type": "Vegetarian"
+      },
+      {
+          "id": 10,
+          "title": "Fish Curry",
+          "description": "Fish cooked in a spicy and tangy curry with coconut milk and tamarind.",
+          "price": 180,
+          "image": "fish_curry.jpg",
+          "type": "Non-Veg"
+      },
+      {
+          "id": 11,
+          "title": "Mutton Curry",
+          "description": "Tender mutton pieces cooked in a flavorful gravy with onions, tomatoes, and spices.",
+          "price": 190,
+          "image": "mutton_curry.jpg",
+          "type": "Non-Veg"
+      },
+      {
+          "id": 12,
+          "title": "Vegetable Biryani",
+          "description": "Fragrant basmati rice cooked with mixed vegetables and aromatic spices.",
+          "price": 150,
+          "image": "vegetable_biryani.jpg",
+          "type": "Vegetarian"
+      },
+      {
+          "id": 13,
+          "title": "Butter Chicken",
+          "description": "Tender chicken pieces cooked in a creamy tomato-based gravy with butter and spices.",
+          "price": 170,
+          "image": "butter_chicken.jpg",
+          "type": "Non-Veg"
+      },
+      {
+          "id": 14,
+          "title": "Prawn Curry",
+          "description": "Prawns cooked in a flavorful coconut-based curry with spices and herbs.",
+          "price": 200,
+          "image": "prawn_curry.jpg",
+          "type": "Non-Veg"
+      },
+      {
+          "id": 15,
+          "title": "Mushroom Masala",
+          "description": "Button mushrooms cooked in a spicy and tangy tomato-based gravy.",
+          "price": 120,
+          "image": "mushroom_masala.jpg",
+          "type": "Vegetarian"
+      },
+      {
+          "id": 16,
+          "title": "Matar Paneer",
+          "description": "A North Indian dish made with peas and paneer cubes cooked in a tomato-based gravy.",
+          "price": 130,
+          "image": "matar_paneer.jpg",
+          "type": "Vegetarian"
+        },
+        {
+          "id": 17,
+          "title": "Pav Bhaji",
+          "description": "A popular street food dish consisting of spicy mashed vegetables served with buttered bread rolls.",
+          "price": 100,
+          "image": "pav_bhaji.jpg",
+          "type": "Vegetarian"
+        },
+        {
+          "id": 18,
+          "title": "Tandoori Fish",
+          "description": "Fish marinated in a blend of yogurt and spices, cooked in a tandoor oven until tender and flavorful.",
+          "price": 180,
+          "image": "tandoori_fish.jpg",
+          "type": "Non-Veg"
+        },
+        {
+          "id": 19,
+          "title": "Kadai Paneer",
+          "description": "Paneer cubes and bell peppers cooked in a spicy tomato-based gravy with aromatic spices.",
+          "price": 140,
+          "image": "kadai_paneer.jpg",
+          "type": "Vegetarian"
+        },
+        {
+          "id": 20,
+          "title": "Chicken Curry",
+          "description": "Tender chicken pieces cooked in a flavorful gravy with onions, tomatoes, and spices.",
+          "price": 160,
+          "image": "chicken_curry.jpg",
+          "type": "Non-Veg"
+        },
+        {
+          "id": 21,
+          "title": "Aloo Matar",
+          "description": "A simple and comforting dish made with potatoes and peas cooked in a spiced tomato gravy.",
+          "price": 110,
+          "image": "aloo_matar.jpg",
+          "type": "Vegetarian"
+        },
+        
+        {
+          "id": 22,
+          "title": "Chicken Biryani",
+          "description": "Fragrant basmati rice cooked with marinated chicken pieces, spices, and herbs.",
+          "price": 190,
+          "image": "chicken_biryani.jpg",
+          "type": "Non-Veg"
+        },
+        {
+          "id": 23,
+          "title": "Paneer Tikka",
+          "description": "Paneer cubes marinated in a spiced yogurt mixture and grilled until charred and smoky.",
+          "price": 150,
+          "image": "paneer_tikka.jpg",
+          "type": "Vegetarian"
+        },
+        {
+          "id": 24,
+          "title": "Egg Curry",
+          "description": "Hard-boiled eggs cooked in a rich and flavorful gravy with onions, tomatoes, and spices.",
+          "price": 150,
+          "image": "egg_curry.jpg",
+          "type": "Non-Veg"
+        }
+  ],
+  "side-course": [
+      {
+          "id": 25,
+          "title": "Mango Pickle",
+          "description": "Spicy and tangy mangoes pickled in mustard oil and spices.",
+          "price": 25,
+          "image": "mango_pickle.jpg",
+          "type": "Vegetarian"
+      },
+      {
+          "id": 26,
+          "title": "Mixed Vegetable Pickle",
+          "description": "Assorted vegetables pickled in a flavorful blend of spices and oil.",
+          "price": 30,
+          "image": "mixed_vegetable_pickle.jpg",
+          "type": "Vegetarian"
+      },
+      {
+          "id": 27,
+          "title": "Chutney",
+          "description": "A condiment made from fresh herbs, spices, and fruits, typically served as a side.",
+          "price": 20,
+          "image": "chutney.jpg",
+          "type": "Vegetarian"
+      },
+      {
+          "id": 28,
+          "title": "Pakora",
+          "description": "Vegetables or meat coated in spiced chickpea flour batter and deep-fried.",
+          "price": 40,
+          "image": "pakora.jpg",
+          "type": "Vegetarian"
+      },
+      {
+          "id": 29,
+          "title": "Papadum",
+          "description": "Thin and crispy lentil-based wafers served as an appetizer or accompaniment.",
+          "price": 15,
+          "image": "papadum.jpg",
+          "type": "Vegetarian"
+      },
+      {
+          "id": 30,
+          "title": "Cucumber Raita",
+          "description": "Cooling yogurt mixed with fresh cucumbers, spices, and herbs.",
+          "price": 20,
+          "image": "cucumber_raita.jpg",
+          "type": "Vegetarian"
+      },
+      {
+          "id": 31,
+          "title": "Lime Pickle",
+          "description": "Tangy lime pieces pickled with spices, typically served as a condiment.",
+          "price": 25,
+          "image": "lime_pickle.jpg",
+          "type": "Vegetarian"
+      },
+      {
+          "id": 32,
+          "title": "Coconut Chutney",
+          "description": "A South Indian condiment made from grated coconut, green chilies, and spices.",
+          "price": 20,
+          "image": "coconut_chutney.jpg",
+          "type": "Vegetarian"
+      },
+      {
+          "id": 33,
+          "title": "Onion Pakora",
+          "description": "Sliced onions coated in spiced chickpea flour batter and deep-fried until crispy.",
+          "price": 35,
+          "image": "onion_pakora.jpg",
+          "type": "Vegetarian"
+      },
+      {
+          "id": 34,
+          "title": "Mint Chutney",
+          "description": "A refreshing condiment made from fresh mint leaves, green chilies, and spices.",
+          "price": 20,
+          "image": "mint_chutney.jpg",
+          "type": "Vegetarian"
+      }
+  ],
+  "drinks": [
+      {
+          "id": 35,
+          "title": "Masala Chai",
+          "description": "A spiced tea made by brewing black tea with aromatic Indian spices and herbs.",
+          "price": 15,
+          "image": "masala_chai.jpg",
+          "type": "Hot"
+        },
+        {
+          "id": 36,
+          "title": "Lassi",
+          "description": "A traditional yogurt-based drink, often flavored with fruit, spices, or herbs.",
+          "price": 25,
+          "image": "lassi.jpg",
+          "type": "Cold"
+        },
+        {
+          "id": 37,
+          "title": "Nimbu Pani",
+          "description": "A refreshing lemonade-like drink made with lemon juice, water, sugar, and spices.",
+          "price": 20,
+          "image": "nimbu_pani.jpg",
+          "type": "Cold"
+        },
+        {
+          "id": 38,
+          "title": "Jaljeera",
+          "description": "A tangy and spicy drink made from cumin, mint, tamarind, and other spices.",
+          "price": 20,
+          "image": "jaljeera.jpg",
+          "type": "Cold"
+        },
+        {
+          "id": 39,
+          "title": "Thandai",
+          "description": "A cooling milk-based drink flavored with nuts, spices, and rose water, often served during festivals like Holi.",
+          "price": 30,
+          "image": "thandai.jpg",
+          "type": "Cold"
+        },
+        {
+          "id": 40,
+          "title": "Sugarcane Juice",
+          "description": "Freshly extracted juice from sugarcane, often served with a dash of lime and ginger.",
+          "price": 25,
+          "image": "sugarcane_juice.jpg",
+          "type": "Cold"
+        },
+        {
+          "id": 41,
+          "title": "Aam Panna",
+          "description": "A refreshing summer drink made from raw mangoes, flavored with spices like cumin and mint.",
+          "price": 30,
+          "image": "aam_panna.jpg",
+          "type": "Cold"
+        },
+        {
+          "id": 42,
+          "title": "Rose Milk",
+          "description": "A sweet and fragrant milk-based drink flavored with rose syrup.",
+          "price": 20,
+          "image": "rose_milk.jpg",
+          "type": "Cold"
+        },
+        {
+          "id": 43,
+          "title": "Badam Milk",
+          "description": "A rich and creamy milk drink flavored with almond paste, saffron, and cardamom.",
+          "price": 35,
+          "image": "badam_milk.jpg",
+          "type": "Cold"
+        },
+        {
+          "id": 44,
+          "title": "Kokum Juice",
+          "description": "A tart and refreshing drink made from kokum fruit, often consumed as a digestive aid.",
+          "price": 25,
+          "image": "kokum_juice.jpg",
+          "type": "Cold"
+        },
+        {
+          "id": 45,
+          "title": "Buttermilk",
+          "description": "A savory yogurt-based drink, often flavored with spices like cumin and mint.",
+          "price": 20,
+          "image": "buttermilk.jpg",
+          "type": "Cold"
+        },
+        {
+          "id": 46,
+          "title": "Sharbat",
+          "description": "A sweet and flavorful syrup mixed with water or milk to make a refreshing drink.",
+          "price": 15,
+          "image": "sharbat.jpg",
+          "type": "Cold"
+        },
+        {
+          "id": 47,
+          "title": "Saffron Milk",
+          "description": "A luxurious milk-based drink infused with saffron threads, often served warm.",
+          "price": 40,
+          "image": "saffron_milk.jpg",
+          "type": "Hot"
+        },
+        {
+          "id": 48,
+          "title": "Ginger Tea",
+          "description": "A hot tea made by brewing black tea with fresh ginger, often sweetened with honey.",
+          "price": 20,
+          "image": "ginger_tea.jpg",
+          "type": "Hot"
+        },
+        {
+          "id": 49,
+          "title": "Butter Tea",
+          "description": "A traditional Tibetan tea made with butter, salt, and yak milk, often consumed for warmth in cold climates.",
+          "price": 30,
+          "image": "butter_tea.jpg",
+          "type": "Hot"
+        }
+  ]
+}

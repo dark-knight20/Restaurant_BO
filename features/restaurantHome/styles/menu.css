@@ -1,42 +1,255 @@
-#body{
-    
-    background: url('../assets/pexels-jonathanborba-2983101.jpg');
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-size: cover;
+#body {
+
+  background: url('../assets/pexels-jonathanborba-2983101.jpg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-size: cover;
 }
+
 :root {
-    --bs-card-bg: #b04141; 
-  }
-header{
-    padding: 20px;
-}
-.card{
-    margin: 2em;
-    background-color: rgb(231, 192, 120) !important ;
-    display: flex;
-    flex-direction: row !important;
-    background-color: wheat;
+  --bs-card-bg: #b04141;
 }
 
-button{
-    outline: none;
-    border: none;
+header {
+  padding: 20px;
 }
 
-h2{
-    margin-left: 1em;
-    color: #b04141;
+.card {
+  margin: 2em;
+  background-color: rgb(231, 192, 120) !important;
+  display: flex;
+  flex-direction: row !important;
+  background-color: wheat;
 }
-h5{
-    color: #712727;
+
+button {
+  outline: none;
+  border: none;
 }
-img{
-    height: 100%;    
-    width: 100%;
+
+h2 {
+  margin-left: 1em;
+  color: #b04141;
 }
-.card-body span{
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
+
+h5 {
+  color: #712727;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+}
+
+.card-body span {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+
+
+/* side bar */
+
+.card1 {
+  position: fixed;
+  top: 0;
+  left: 100%;
+  width: 450px;
+  background-color: #ffffff;
+  height: 100vh;
+  transition: 0.5s;
+  z-index: 10;
+  box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.2);
+}
+
+.active .card1 {
+  left: calc(100% - 450px);
+
+}
+
+.active .content-div {
+  width: 100%;
+  height: 100%;
+  filter: blur(3px);
+}
+
+.active .container {
+  transform: translateX(-200px);
+}
+
+.card1 h1 {
+  color: #E8BC0E;
+  font-weight: 100;
+  margin: 0;
+  padding: 0 20px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+}
+
+.card1 .checkOut {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+}
+
+.card1 .checkOut div {
+  background-color: #E8BC0E;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.card1 .checkOut div:nth-child(2) {
+  background-color: #1C1F25;
+  color: #fff;
+}
+
+.listCard li {
+  display: grid;
+  grid-template-columns: 100px repeat(3, 1fr);
+  color: #fff;
+  row-gap: 10px;
+  overflow-y: auto;
+}
+
+.listCard li div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.listCard li img {
+  width: 90%;
+}
+
+.listCard li button {
+  background-color: #fff5;
+  border: none;
+}
+
+.listCard .count {
+  margin: 0 10px;
+}
+
+.btn-close {
+  margin-left: 270px !important;
+}
+
+.hr-cart {
+  height: 2px !important;
+  background-color: #000 !important;
+}
+
+.cart-image {
+  width: 90px !important;
+  height: 90px !important;
+  border-radius: 22px;
+}
+
+.veg-non-box {
+  width: 15px;
+  height: 15px;
+  border: 1px solid hsl(0, 0%, 0%);
+  /* background-color: red; */
+}
+
+.red-margin {
+  margin-bottom: 0 !important;
+  margin-top: 10px;
+}
+
+.remove-item-button {
+  margin-left: 70px;
+  text-decoration: underline;
+  background-color: transparent;
+}
+
+.add-more-button {
+  padding: 20px;
+  bottom: 120px;
+  right: 10px;
+  position: absolute;
+}
+
+.cart-desc p {
+  margin-bottom: 0 !important;
+}
+
+.pad-reomve {
+  padding: 0 !important;
+}
+
+.count-select button {
+  border: none;
+}
+
+.remove-text {
+  text-decoration: underline;
+}
+
+.remove-text-div {
+  margin-left: 40px;
+}
+
+#remove-item button {
+  border: none;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+.food-item {
+  width: 90%;
+  /* border: 1px solid black; */
+  padding: 8px;
+  margin-left: 25px !important;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 15px;
+}
+
+.cart-footer {
+  position: fixed;
+  bottom: 10px;
+  width: 100%;
+  height: 120px;
+  box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.2);
+  background-color: white;
+}
+
+.total-bottom {
+  margin-left: 310px;
+}
+
+.shipping-bottom {
+  margin-left: 180px;
+}
+
+.total-final {
+  margin-left: 180px !important;
+  /* background-color: white; */
+}
+
+.total-final-text {
+  margin-left: 110px !important;
+}
+
+#proceed-button {
+  border-color: transparent;
+  background-color: black;
+  width: 400px !important;
+  height: 40px !important;
+  color: white;
+}
+
+.m-remove p {
+  margin: 0;
 }
