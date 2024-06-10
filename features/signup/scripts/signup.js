@@ -28,7 +28,7 @@ function addUser(username, password, address, phone_no) {
 
   localStorage.setItem('credentials', JSON.stringify(credentials));
   alert('user created')
-  window.location.href('login.html');
+  window.location.href='../login/index.html';
 
 
   console.log(localStorage.getItem('credentials'));

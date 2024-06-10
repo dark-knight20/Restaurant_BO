@@ -5,7 +5,7 @@
             "title": "Chicken Tikka Masala",
             "description": "Grilled chicken pieces cooked in a creamy tomato-based sauce with spices.",
             "price": 150,
-            "image": "chicken_tikka_masala.jpg",
+            "image": "https://th.bing.com/th/id/R.bd6f8c8d7023deae1fe812e997f8b50e?rik=foUu1y03s6cqTw&riu=http%3a%2f%2fimages.bigoven.com%2fimage%2fupload%2fv1442508954%2fhealthy-chicken-tikka-masala-9443a3.jpg&ehk=Vc%2f86qe33ECqKM6iRSob5Rm%2b8XfFbz%2fXTTIbJ7KozKc%3d&risl=1&pid=ImgRaw&r=0",
             "type": "Non-Veg"
         },
         {
@@ -196,7 +196,7 @@
     ],
     "side-course": [
         {
-            "id": 1,
+            "id": 25,
             "title": "Mango Pickle",
             "description": "Spicy and tangy mangoes pickled in mustard oil and spices.",
             "price": 25,
@@ -204,7 +204,7 @@
             "type": "Vegetarian"
         },
         {
-            "id": 2,
+            "id": 26,
             "title": "Mixed Vegetable Pickle",
             "description": "Assorted vegetables pickled in a flavorful blend of spices and oil.",
             "price": 30,
@@ -212,7 +212,7 @@
             "type": "Vegetarian"
         },
         {
-            "id": 3,
+            "id": 27,
             "title": "Chutney",
             "description": "A condiment made from fresh herbs, spices, and fruits, typically served as a side.",
             "price": 20,
@@ -220,7 +220,7 @@
             "type": "Vegetarian"
         },
         {
-            "id": 4,
+            "id": 28,
             "title": "Pakora",
             "description": "Vegetables or meat coated in spiced chickpea flour batter and deep-fried.",
             "price": 40,
@@ -228,7 +228,7 @@
             "type": "Vegetarian"
         },
         {
-            "id": 5,
+            "id": 29,
             "title": "Papadum",
             "description": "Thin and crispy lentil-based wafers served as an appetizer or accompaniment.",
             "price": 15,
@@ -236,7 +236,7 @@
             "type": "Vegetarian"
         },
         {
-            "id": 6,
+            "id": 30,
             "title": "Cucumber Raita",
             "description": "Cooling yogurt mixed with fresh cucumbers, spices, and herbs.",
             "price": 20,
@@ -244,7 +244,7 @@
             "type": "Vegetarian"
         },
         {
-            "id": 7,
+            "id": 31,
             "title": "Lime Pickle",
             "description": "Tangy lime pieces pickled with spices, typically served as a condiment.",
             "price": 25,
@@ -252,7 +252,7 @@
             "type": "Vegetarian"
         },
         {
-            "id": 8,
+            "id": 32,
             "title": "Coconut Chutney",
             "description": "A South Indian condiment made from grated coconut, green chilies, and spices.",
             "price": 20,
@@ -260,7 +260,7 @@
             "type": "Vegetarian"
         },
         {
-            "id": 9,
+            "id": 33,
             "title": "Onion Pakora",
             "description": "Sliced onions coated in spiced chickpea flour batter and deep-fried until crispy.",
             "price": 35,
@@ -268,7 +268,7 @@
             "type": "Vegetarian"
         },
         {
-            "id": 10,
+            "id": 34,
             "title": "Mint Chutney",
             "description": "A refreshing condiment made from fresh mint leaves, green chilies, and spices.",
             "price": 20,
@@ -278,7 +278,7 @@
     ],
     "drinks": [
         {
-            "id": 1,
+            "id": 35,
             "title": "Masala Chai",
             "description": "A spiced tea made by brewing black tea with aromatic Indian spices and herbs.",
             "price": 15,
@@ -286,7 +286,7 @@
             "type": "Hot"
           },
           {
-            "id": 2,
+            "id": 36,
             "title": "Lassi",
             "description": "A traditional yogurt-based drink, often flavored with fruit, spices, or herbs.",
             "price": 25,
@@ -294,7 +294,7 @@
             "type": "Cold"
           },
           {
-            "id": 3,
+            "id": 37,
             "title": "Nimbu Pani",
             "description": "A refreshing lemonade-like drink made with lemon juice, water, sugar, and spices.",
             "price": 20,
@@ -302,7 +302,7 @@
             "type": "Cold"
           },
           {
-            "id": 4,
+            "id": 38,
             "title": "Jaljeera",
             "description": "A tangy and spicy drink made from cumin, mint, tamarind, and other spices.",
             "price": 20,
@@ -310,7 +310,7 @@
             "type": "Cold"
           },
           {
-            "id": 5,
+            "id": 39,
             "title": "Thandai",
             "description": "A cooling milk-based drink flavored with nuts, spices, and rose water, often served during festivals like Holi.",
             "price": 30,
@@ -318,7 +318,7 @@
             "type": "Cold"
           },
           {
-            "id": 6,
+            "id": 40,
             "title": "Sugarcane Juice",
             "description": "Freshly extracted juice from sugarcane, often served with a dash of lime and ginger.",
             "price": 25,
@@ -326,7 +326,7 @@
             "type": "Cold"
           },
           {
-            "id": 7,
+            "id": 41,
             "title": "Aam Panna",
             "description": "A refreshing summer drink made from raw mangoes, flavored with spices like cumin and mint.",
             "price": 30,
@@ -334,7 +334,7 @@
             "type": "Cold"
           },
           {
-            "id": 8,
+            "id": 42,
             "title": "Rose Milk",
             "description": "A sweet and fragrant milk-based drink flavored with rose syrup.",
             "price": 20,
@@ -342,7 +342,7 @@
             "type": "Cold"
           },
           {
-            "id": 9,
+            "id": 43,
             "title": "Badam Milk",
             "description": "A rich and creamy milk drink flavored with almond paste, saffron, and cardamom.",
             "price": 35,
@@ -350,7 +350,7 @@
             "type": "Cold"
           },
           {
-            "id": 10,
+            "id": 44,
             "title": "Kokum Juice",
             "description": "A tart and refreshing drink made from kokum fruit, often consumed as a digestive aid.",
             "price": 25,
@@ -358,7 +358,7 @@
             "type": "Cold"
           },
           {
-            "id": 11,
+            "id": 45,
             "title": "Buttermilk",
             "description": "A savory yogurt-based drink, often flavored with spices like cumin and mint.",
             "price": 20,
@@ -366,7 +366,7 @@
             "type": "Cold"
           },
           {
-            "id": 12,
+            "id": 46,
             "title": "Sharbat",
             "description": "A sweet and flavorful syrup mixed with water or milk to make a refreshing drink.",
             "price": 15,
@@ -374,7 +374,7 @@
             "type": "Cold"
           },
           {
-            "id": 13,
+            "id": 47,
             "title": "Saffron Milk",
             "description": "A luxurious milk-based drink infused with saffron threads, often served warm.",
             "price": 40,
@@ -382,7 +382,7 @@
             "type": "Hot"
           },
           {
-            "id": 14,
+            "id": 48,
             "title": "Ginger Tea",
             "description": "A hot tea made by brewing black tea with fresh ginger, often sweetened with honey.",
             "price": 20,
@@ -390,7 +390,7 @@
             "type": "Hot"
           },
           {
-            "id": 15,
+            "id": 49,
             "title": "Butter Tea",
             "description": "A traditional Tibetan tea made with butter, salt, and yak milk, often consumed for warmth in cold climates.",
             "price": 30,
