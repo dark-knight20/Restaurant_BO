@@ -191,11 +191,12 @@
 
         </div>
     </div>
+    <!-- side bar -->
     <div class="card1">
         <DIV class="d-flex ms-4 mt-4 text-dark">
             <h5>Order List</h5>
             <p class="total ms-2">
-            <h5 id="totalCount"></h5>
+            <h5 id="totalCount">(0)</h5>
             </p>
             <button type="button" class="btn-close" aria-label="Close" id="close-button"></button>
         </DIV>
@@ -213,16 +214,18 @@
                         <div id="cart-item-color" class="veg-non-box"></div>
                     </div>
                     <div class="d-flex mt-2">
-                        <div class="d-flex count-select">
-                            <div class=" pad-reomve"><button type="button" id="minus"><i
-                                        class="bi bi-dash"></i></button></div>
-                            <div class=" pad-reomve"><input type="text" style="width: 25px; height: 25px;"
-                                    id="count-items" value=1 readonly>
+                        <!-- <div class="d-flex count-select">
+                            <div class="pad-reomve">
+                                <button type="button" class="minus"><i class="bi bi-dash"></i></button>
                             </div>
-                            <div class=" pad-reomve"><button type="button" id="plus"><i class="bi bi-plus"></i></button>
+                            <div class="pad-reomve">
+                                <input type="text" style="width: 25px; height: 25px;" class="count-items" value="1" readonly>
                             </div>
-
-                        </div>
+                            <div class="pad-reomve">
+                                <button type="button" class="plus"><i class="bi bi-plus"></i></button>
+                            </div>
+                        </div> -->
+                        
                         <div class="remove-text-div">
                             <p class="remove-text" id="remove-item"><button type="button"
                                     class="remove-item-button">remove</button></p>
@@ -231,7 +234,7 @@
                     </div>
                 </div>
                 <div class="col-2 d-flex justify-content-end">
-                    <p class="fw-semibold " id="total-amount">₹120</p>
+                    <p class="fw-semibold total_amount " id="total-amount">₹0</p>
                 </div>
 
             </div>
@@ -239,16 +242,16 @@
 
 <!-- <img src=".../json/data.json" alt=""> -->
         </div>
-        <div class="add-more-button">
+        <!-- <div class="add-more-button">
             <button class="btn btn-dark ">Add More Items</button>
-        </div>
+        </div> -->
         <div class="cart-footer  p-3 ">
 
             <div class="d-flex total-final mx-3">
                 <p class="fw-semibold">TOTAL</p>
-                <p class="total-bottom" id="cart-total">₹120</p>
+                <p class="total-bottom" id="cart-total">₹0</p>
             </div>
-            <div class="mx-3"><button type="button" id="proceed-button">CONFIRM ORDER</button></div>
+            <div class="mx-3"><button type="button" id="proceed-button" onclick="orderConfirmed();">CONFIRM ORDER</button></div>
         </div>
 
     </div>
