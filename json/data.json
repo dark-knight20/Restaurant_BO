@@ -198,7 +198,8 @@
             "title":"Dosa",
             "description":"A dish made from a fermented mixture of rice and white gram.",
             "price":80,
-            "image":"https://thespicepaletteus.com/wp-content/uploads/2021/07/plain-dosa.jpg"
+            "image":"https://thespicepaletteus.com/wp-content/uploads/2021/07/plain-dosa.jpg",
+            "type": "Vegetarian"
           }
 
     ],
