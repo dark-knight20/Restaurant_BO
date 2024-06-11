@@ -9,6 +9,7 @@ function checkUser() {
             if (document.getElementById('password').value === user.password) {
                 res = true;
                 console.log("logged in successfully");
+                localStorage.setItem('currentUser',user.username);
                 window.location.href = '../restaurantHome/index.html';
                 break;
             }

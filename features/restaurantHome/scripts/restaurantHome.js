@@ -1,8 +1,7 @@
-
 let selectedList = [];
 addEventListener('DOMContentLoaded', function () {
     let openShopping = document.getElementById('addToCart');
-    console.log(openShopping)
+    // console.log(openShopping)
     let closeShopping = document.getElementById('close-button');
     closeShopping.addEventListener('click', () => {
         console.log("closed cart")
@@ -10,14 +9,16 @@ addEventListener('DOMContentLoaded', function () {
         console.log(closeShopping)
     })
 
-
-
+    fetchData();
+    this.setTimeout(function()
+{
     document.querySelectorAll('.select-btn').forEach(function (button) {
         button.addEventListener('click', function (event) {
             event.preventDefault(); // Prevent default link behavior
-
+            console.log("item selection triggered")
             // Extract the ID of the parent card
             const itemId = this.closest('.card').id;
+            console.log(itemId)
 
             // Add the ID to the selectedList array
             if (!selectedList.includes(itemId)) {
@@ -29,6 +30,9 @@ addEventListener('DOMContentLoaded', function () {
             console.log(selectedList);
         });
     });
+},200)
+    
+ 
 
 
     document.getElementById("openCart").addEventListener('click', displayCartItems);
@@ -93,7 +97,7 @@ function displayCartItems() {
                 console.log(item.price)
                 let cartItem = document.createElement('div');
                 cartItem.classList.add("d-flex", "row", "food-item");
-                cartItem.id=item.id;
+                cartItem.id = item.id;
 
                 let itemImageDiv = document.createElement('div');
                 itemImageDiv.classList.add("col-3", "d-flex", "justify-content-center", "ms-2");
@@ -187,14 +191,14 @@ function displayCartItems() {
 
                 let removeItemBtn = document.createElement('button');
                 removeItemBtn.type = "button";
-                removeItemBtn.classList.add("remove-item-button","remove-item");
+                removeItemBtn.classList.add("remove-item-button", "remove-item");
                 removeItemBtn.textContent = "remove";
 
                 let itemPrice = document.createElement('div');
                 itemPrice.classList.add("col-2", "d-flex", "justify-content-end");
 
                 let itemPriceText = document.createElement('p');
-                itemPriceText.classList.add("fw-semibold","total_amount");
+                itemPriceText.classList.add("fw-semibold", "total_amount");
                 itemPriceText.id = "total-amount";
                 itemPriceText.textContent = "₹" + item.price;
 
@@ -202,7 +206,7 @@ function displayCartItems() {
 
 
                 removeTextDiv.appendChild(removeItemBtn);
-                
+
                 countSelectDiv.appendChild(removeTextDiv);
 
                 cartDescDiv.appendChild(countSelectDiv);
@@ -213,7 +217,7 @@ function displayCartItems() {
                 cartItemContainer.appendChild(cartItem);
 
                 totalCount++;
-                cartTotal+=item.price;
+                cartTotal += item.price;
                 document.getElementById('totalCount').textContent = "(" + totalCount + ")";
                 document.getElementById('cart-total').textContent = "₹" + cartTotal;
 
@@ -245,29 +249,30 @@ function displayCartItems() {
                         count++;
                         countInput.value = count;
                         updateCartTotal();
-                        
+
                     });
                     return;
                 });
 
-                document.querySelectorAll('remove-item').forEach(function (removeBtn) {
+                document.querySelectorAll('.remove-item').forEach(function (removeBtn) {
                     console.log("triggered remove")
                     removeBtn.addEventListener('click', function () {
-                    this.closest('.food-item').textContent='';
-                    updateCartTotal();
-                })});
+                        this.closest('.food-item').textContent = '';
+                        updateCartTotal();
+                    })
+                });
 
                 function updateCartTotal() {
                     totalCount = 0;
                     cartTotal = 0;
-                   
+
 
                     document.querySelectorAll('.count-items').forEach(function (countInput) {
                         let count = parseInt(countInput.value);
                         let itemPrice = parseFloat(countInput.closest('.food-item').querySelector('.total_amount').textContent.replace(/[^\d.]/g, ''));
                         totalCount += count;
                         console.log(item.price)
-                        cartTotal += count *itemPrice; 
+                        cartTotal += count * itemPrice;
                     });
 
                     document.getElementById('totalCount').textContent = "(" + totalCount + ")";
@@ -281,26 +286,83 @@ function displayCartItems() {
         )
 }
 
-function orderConfirmed(){
+function orderConfirmed() {
     console.log("exit triggered")
-let currentOrder = {
-    items: [],
-    totalCount: totalCount,
-    totalPrize: cartTotal
-};
+    let currentOrder = {
+        items: [],
+        totalCount: totalCount,
+        totalPrize: cartTotal
+    };
 
-document.querySelectorAll('.food-item').forEach(function (item) {
-    console.log(item)
-    let itemId = item.id;
-    let itemCount = parseInt(item.querySelector('.count-items').value);
-    currentOrder.items.push({ id: itemId, count: itemCount });
-});
+    document.querySelectorAll('.food-item').forEach(function (item) {
+        console.log(item)
+        let itemId = item.id;
+        let itemCount = parseInt(item.querySelector('.count-items').value);
+        currentOrder.items.push({ id: itemId, count: itemCount });
+    });
 
-let currentOrderJSON = JSON.stringify(currentOrder);
+    let currentOrderJSON = JSON.stringify(currentOrder);
 
-localStorage.setItem('currentOrder', currentOrderJSON);
+    localStorage.setItem('currentOrder', currentOrderJSON);
 
-    window.location.href="../OrderConfirmed/index.html";
+    window.location.href = "../orderConfirm/index.html";
 }
 
 console.log(localStorage.getItem('currentOrder'))
+
+
+//fetching items
+async function fetchData() {
+    try {
+        const response = await fetch('../../json/data.json');
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const data = await response.json();
+        console.log(data); // To check the fetched data
+        displayItems(data["main-course"], 'dishes-container');
+        displayItems(data["side-course"], 'sides-container');
+        displayItems(data["drinks"], 'drinks-container');
+    } catch (error) {
+        console.error('Error fetching the data:', error);
+    }
+}
+
+function displayItems(items, containerId) {
+    const container = document.getElementById(containerId);
+    container.innerHTML = '';
+    items.forEach(item => {
+        const card = document.createElement('div');
+        card.classList.add('col');
+        card.innerHTML = `
+        <div class="card mb-3" id="${item.id}">
+            <div class="row g-0">
+                <div class="image-container col-md-5">
+                    <img src="${item.image}" class="image" alt="${item.title}" />
+                </div>
+                <div class="col-md-7">
+                    <div class="card-body">
+                        <h5 class="card-title">${item.title}</h5>
+                        <p class="card-text">
+                            ${item.description}
+                        </p>
+                        <span>
+                            <p>MRP : ₹ ${item.price}</p>
+                            <a class="btn btn-dark select-btn">+</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        `;
+        container.appendChild(card);
+    });
+}
+
+
+
+
+
+
+//   document.addEventListener('DOMContentLoaded', fetchData);
+
