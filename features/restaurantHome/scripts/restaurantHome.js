@@ -51,7 +51,7 @@ addEventListener('DOMContentLoaded', function () {
 // }, 200)
 
 // console.log(selectedList)
-
+ 
 function openCart() {
     document.body.classList.add('active');
 }
