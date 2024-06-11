@@ -171,7 +171,7 @@ img {
   margin-left: 70px;
   text-decoration: underline;
   background-color: transparent;
-  z-index: 10;
+  z-index: 111 !important;
 }
 
 .add-more-button {
@@ -330,3 +330,7 @@ h5{
   justify-content: center;
   padding: 3%;
 }
+
+/* .select-btn{
+  background-color: black;
+} */

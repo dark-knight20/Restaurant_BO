@@ -16,7 +16,16 @@ addEventListener('DOMContentLoaded', function () {
         button.addEventListener('click', function (event) {
             event.preventDefault(); // Prevent default link behavior
             console.log("item selection triggered")
+            if(button.style.backgroundColor=='grey')
+                {
+                    button.style.backgroundColor='blue';
+                }
+                else{
+                    button.style.backgroundColor='grey';
+                }
+           
             // Extract the ID of the parent card
+
             const itemId = this.closest('.card').id;
             console.log(itemId)
 
@@ -193,6 +202,10 @@ function displayCartItems() {
                 removeItemBtn.type = "button";
                 removeItemBtn.classList.add("remove-item-button", "remove-item");
                 removeItemBtn.textContent = "remove";
+                removeItemBtn.onclick=function() {
+                    console.log("remove trigger")
+                    removeItem(item.id);
+                };
 
                 let itemPrice = document.createElement('div');
                 itemPrice.classList.add("col-2", "d-flex", "justify-content-end");
@@ -256,24 +269,44 @@ function displayCartItems() {
 
                 document.querySelectorAll('.remove-item').forEach(function (removeBtn) {
                     console.log("triggered remove")
+                    console.log(removeBtn)
+                    // currentId=this.closest('.food-item').id
+                    // removeBtn.onclick =removeItem(currentId);
                     removeBtn.addEventListener('click', function () {
+                        console.log("triggered remove new")
+                        // removeItem(1);
                         this.closest('.food-item').textContent = '';
                         updateCartTotal();
                     })
                 });
-
+                
+                let itemId;
                 function updateCartTotal() {
                     totalCount = 0;
                     cartTotal = 0;
 
 
-                    document.querySelectorAll('.count-items').forEach(function (countInput) {
-                        let count = parseInt(countInput.value);
-                        let itemPrice = parseFloat(countInput.closest('.food-item').querySelector('.total_amount').textContent.replace(/[^\d.]/g, ''));
+                    // document.querySelectorAll('.count-items').forEach(function (countInput) {
+                    //     let count = parseInt(countInput.value);
+                    //     let itemPrice = parseFloat(countInput.closest('.food-item').querySelector('.total_amount').textContent.replace(/[^\d.]/g, ''));
+                    //     totalCount += count;
+                    //     console.log(item.price)
+                    //     cartTotal += count * itemPrice;
+                    // });
+                    document.querySelectorAll('.count-items').forEach(function(countInput)
+                {
+                    
+                    itemId=countInput.closest('.food-item').id;
+                    console.log(itemId+"set")
+                    document.getElementById(itemId).addEventListener('click',function()
+                {
+                    console.log("working plus function")
+                    let itemPrice = parseFloat(countInput.closest('.food-item').querySelector('.total_amount').textContent.replace(/[^\d.]/g, ''));
                         totalCount += count;
                         console.log(item.price)
                         cartTotal += count * itemPrice;
-                    });
+                })
+                })
 
                     document.getElementById('totalCount').textContent = "(" + totalCount + ")";
                     document.getElementById('cart-total').textContent = "₹" + cartTotal;
@@ -366,3 +399,10 @@ function displayItems(items, containerId) {
 
 //   document.addEventListener('DOMContentLoaded', fetchData);
 
+function removeItem(id){
+    // document.getElementById(id);
+    console.log(id)
+    document.getElementById(id).textContent='';
+    console.log("click worked")
+    console.log(document.getElementById(id))
+}
