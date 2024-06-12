@@ -10,6 +10,7 @@ function checkUser() {
                 res = true;
                 console.log("logged in successfully");
                 localStorage.setItem('currentUser',user.username);
+                localStorage.setItem('currentUser', JSON.stringify(user));
                 window.location.href = '../restaurantHome/index.html';
                 break;
             }

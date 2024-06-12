@@ -7,7 +7,7 @@ function signup(e) {
   const password = document.getElementById("password").value;
   const address = document.getElementById("address").value;
   const phone_no = document.getElementById("phone_no").value;
-
+  
   addUser(username, password, address, phone_no);
 }
 
@@ -15,7 +15,7 @@ function addUser(username, password, address, phone_no) {
   const storedCredentials = localStorage.getItem('credentials');
   const credentials = storedCredentials ? JSON.parse(storedCredentials) : { 'users': [] };
   const newUserId = credentials.users.length + 1;
-
+  //new user creation
   const newUser = {
     'id': newUserId,
     'username': username,

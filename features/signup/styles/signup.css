@@ -1,13 +1,12 @@
 .bg-image{
-    /* background-image: url('/assets/bg-signup.jpeg'); */
-    background-color: rgb(175, 153, 113);
-    background-repeat: no-repeat;
+    display: flex;
+    flex-wrap: wrap;
     width: 100%;
     height: 100vh;
-    background-position: center;
-    background-size: cover;
-    position: fixed;
-    
+    align-content: center;
+    justify-content: center;
+background-image: url('../assets/signup-background.jpg');
+background-size:cover;
 }
 .signup-card{
     margin:3em 25em 5em 25em;

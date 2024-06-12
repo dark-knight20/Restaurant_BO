@@ -1,34 +1,31 @@
 body{
-  background-color: #fff;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
 }
 header{
+    background-color: #434655;
+    color: white;
     position: fixed;
-    z-index: 100000;
+    z-index: 5;
     width: 100%;
+    height: 90px;
 }
-.footer{
-    position: fixed;
-    z-index: 100000;
-}
+
 .header-span{
     display: flex;
     align-items: center;
 }
-.header-span img{
-    padding: 3em;
-}
+
 .header-span h4{
-    margin-left:30%;
+    margin-left:28%;
+    margin-top: 1%;
 }
 
 .container{
-    
     background-color: rgb(204, 209, 221);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .card{
-    z-index: 10000;
     margin: 2em;
     background-color: rgb(255, 255, 255) !important ;
     display: flex;
@@ -81,15 +78,35 @@ h5{
 }
 
 .add-cart{
-    display: flex;
-    justify-content: center;
-    padding: 3%;
-}
-.footer{
-  z-index: 10000;
-  /* position: fixed; */
+  margin-top: -3%;
+  display: flex;
+  justify-content: flex-end;
 }
 
+.add-cart button{
+  margin: 0 6% 1% 0;
+  border: #000;
+  color: #fff;
+  background-color: #434655;
+  border-radius: 25px;
+  width: 100px;
+  height: 2em;
+}
+
+footer {
+  background-color: #434655;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  z-index: 1;
+}
+footer p{
+  margin: 1%;
+}
 
 /* @media (max-width: 1000px) {
     .card {
