@@ -216,6 +216,10 @@ img {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   margin-bottom: 15px;
 }
+.scrolable{
+  overflow-y: scroll;
+    height: 400px;
+}
 
 .cart-footer {
   position: fixed;
