@@ -10,38 +10,44 @@ addEventListener('DOMContentLoaded', function () {
     })
 
     fetchData();
-    this.setTimeout(function()
-{
-    document.querySelectorAll('.select-btn').forEach(function (button) {
-        button.addEventListener('click', function (event) {
-            event.preventDefault(); // Prevent default link behavior
-            console.log("item selection triggered")
-            if(button.style.backgroundColor=='grey')
-                {
-                    button.style.backgroundColor='blue';
-                }
-                else{
-                    button.style.backgroundColor='grey';
-                }
-           
-            // Extract the ID of the parent card
+    this.setTimeout(function () {
+        document.querySelectorAll('.select-btn').forEach(function (button) {
+            button.addEventListener('click', function (event) {
+                event.preventDefault(); // Prevent default link behavior
+                console.log("item selection triggered")
+                if (button.style.border != 'blue') {
+                    // button.closest('.card').style.border= '1px solid blue';
+                    button.closest('.card').style.transition = 'all 1s ease';
+                    button.closest('.card').style.boxShadow = '1px 1px 5px rgba(0, 0, 255, 0.5)';
 
-            const itemId = this.closest('.card').id;
-            console.log(itemId)
 
-            // Add the ID to the selectedList array
-            if (!selectedList.includes(itemId)) {
+
+                }
+                setTimeout(function () {
+                    // button.style.backgroundColor = 'grey';
+                    // button.closest('.card').style.border= 'none';
+                    button.closest('.card').style.transition = 'all 1s ease';
+                    button.closest('.card').style.boxShadow = 'none';
+                }, 1500)
+
+                // Extract the ID of the parent card
+
+                const itemId = this.closest('.card').id;
+                console.log(itemId)
+
                 // Add the ID to the selectedList array
-                selectedList.push(itemId);
-            }
+                if (!selectedList.includes(itemId)) {
+                    // Add the ID to the selectedList array
+                    selectedList.push(itemId);
+                }
 
-            // Log the updated selectedList
-            console.log(selectedList);
+                // Log the updated selectedList
+                console.log(selectedList);
+            });
         });
-    });
-},200)
-    
- 
+    }, 200)
+
+
 
 
     document.getElementById("openCart").addEventListener('click', displayCartItems);
@@ -59,6 +65,8 @@ function openCart() {
 let totalCount = 0;
 let cartTotal = 0;
 function displayCartItems() {
+    totalCount = 0;
+    cartTotal = 0;
     const cartItemContainer = document.getElementById('cartList');
 
     cartItemContainer.innerHTML = "";
@@ -154,6 +162,8 @@ function displayCartItems() {
                 let minusBtn = document.createElement('button');
                 minusBtn.type = "button";
                 minusBtn.classList.add("minus");
+                minusBtn.id = "minus" + item.id;
+                // minusBtn.onclick = minusCount(minusBtn.id);
 
                 let minusIcon = document.createElement('i');
                 minusIcon.classList.add("bi", "bi-dash");
@@ -172,6 +182,7 @@ function displayCartItems() {
                 inputField.style.height = "25px";
                 inputField.value = 1;
                 inputField.readOnly = true;
+                inputField.id = "input" + item.id;
 
                 inputDiv.appendChild(inputField);
                 countSelectDiv.appendChild(inputDiv);
@@ -182,6 +193,8 @@ function displayCartItems() {
                 let plusBtn = document.createElement('button');
                 plusBtn.type = "button";
                 plusBtn.classList.add("plus");
+                plusBtn.id = "plus" + item.id;
+                // plusBtn.onclick = plusCount(plusBtn.id);
 
                 let plusIcon = document.createElement('i');
                 plusIcon.classList.add("bi", "bi-plus");
@@ -202,7 +215,7 @@ function displayCartItems() {
                 removeItemBtn.type = "button";
                 removeItemBtn.classList.add("remove-item-button", "remove-item");
                 removeItemBtn.textContent = "remove";
-                removeItemBtn.onclick=function() {
+                removeItemBtn.onclick = function () {
                     console.log("remove trigger")
                     removeItem(item.id);
                 };
@@ -252,20 +265,140 @@ function displayCartItems() {
                         return;
                     });
                 });
-                document.querySelectorAll('.plus').forEach(function (plusBtn) {
-                    console.log("plus")
-                    plusBtn.addEventListener('click', function () {
-                        let countInput = this.closest('.count-select').querySelector('.count-items');
-                        let count = parseInt(countInput.value);
 
-                        // Increment the count value
+                document.querySelectorAll('.plus').forEach(function(plusBtn) {
+                    plusBtn.addEventListener('click', function() {
+                        let countInput = this.closest('.count-select').querySelector('.count-items');
+                        if (!countInput) {
+                            console.log("Count input not found.");
+                            return;
+                        }
+
+                        let count = parseInt(countInput.value);
                         count++;
                         countInput.value = count;
-                        updateCartTotal();
 
+                        updateCartTotal();
                     });
-                    return;
                 });
+                // function minusCount(id, txtId) {
+                //     console.log(id);
+                //     let element = document.getElementById(id); // Declare 'element' using 'let'
+                //     console.log(element);
+
+                //     let countInput = element.closest('.count-select').querySelector("#" + txtId);
+                //     if (!countInput) {
+                //         // console.log("Count input not found.");
+                //         // return;
+                //     }
+
+                //     let count = parseInt(countInput.value);
+                //     console.log('===============')
+                //     console.log(countInput.value)
+                //     if (count > 0) {
+                //         count--;
+                //         countInput.value = count;
+                //         updateCartTotal();
+                //     }
+                // }
+
+
+                // function plusCount(id, txtId) {
+                //     console.log("plus")
+                //     console.log(id);
+                //     let element = document.getElementById(id); // Declare 'element' using 'let'
+                //     console.log(element);
+
+
+                //     // let countInput = element.closest('.count-select').querySelector("#"+txtId);
+                //     let countInput = document.getElementById(txtId);
+                //     if (!countInput) {
+                //         console.log("Count input not found.");
+                //         return;
+                //     }
+                //     let count = parseInt(countInput.value);
+                //     console.log(countInput.value)
+                //     console.log(count)
+                //     count++;
+                //     console.log(count)
+                //     countInput.value = count;
+                //     console.log(countInput.value)
+                //     console.log("Hai")
+                //     //updateCartTotal();
+                // }
+
+                // document.addEventListener('click',function(element) {
+
+                //     if(element.target.classList.includes('.plus'))
+                //         {
+                //             targetId=target.id;
+                //             plusCount(targetId)
+                //         }
+
+                // })
+
+
+
+
+                // document.addEventListener('click', function (event) {
+                //     console.log("click triggered on plus icon")
+                //     event.stopPropagation();
+                //     // Check if the clicked element or its ancestor is a .plus button
+                //     let plusBtn = event.target.closest('.plus');
+                //    console.log("plus btn ="+ plusBtn.id) 
+                //     // let add=0;
+                //     let txtBtn = event.target.closest('.count-select').querySelector('.count-items');
+                //     //let txtBtn = 'plus50'
+                //     console.log(txtBtn)
+                //     console.log('edwin marker')
+                    
+                //     if (plusBtn) {
+                //         // Get the id of the plus button
+                //         console.log("triggered add if")
+                //         let targetId = plusBtn.id;
+                //         let txtId = txtBtn.id;
+                //         plusCount(targetId, txtId);
+                //         console.log(targetId)
+                //         console.log(txtId)
+                //     }
+
+
+                // });
+                
+                // document.addEventListener('click', function (event) {
+                //     // Check if the clicked element or its ancestor is a .plus button
+                //     let minusBtn = event.target.closest('.minus');
+                //     let txtBtn = event.target.closest('.count-select').querySelector('.count-items');
+                //     if (minusBtn) {
+                //         // Get the id of the plus button
+                //         let targetId = plusBtn.id;
+                //         let txtId = txtBtn.id;
+                //         minusCount(targetId, txtId);
+                //     }
+                // });
+
+
+
+
+
+
+
+
+
+                // document.querySelectorAll('.plus').forEach(function (plusBtn) {
+                //     console.log("plus")
+                //     plusBtn.addEventListener('click', function () {
+                //         let countInput = this.closest('.count-select').querySelector('.count-items');
+                //         let count = parseInt(countInput.value);
+
+                //         // Increment the count value
+                //         count++;
+                //         countInput.value = count;
+                //         updateCartTotal();
+
+                //     });
+                //     return;
+                // });
 
                 document.querySelectorAll('.remove-item').forEach(function (removeBtn) {
                     console.log("triggered remove")
@@ -275,38 +408,52 @@ function displayCartItems() {
                     removeBtn.addEventListener('click', function () {
                         console.log("triggered remove new")
                         // removeItem(1);
-                        this.closest('.food-item').textContent = '';
+                        currentIdDelete = this.closest('.food-item').id;
+                        this.closest('.food-item').remove();
+                        let index = selectedList.indexOf(currentIdDelete);
+
+                        if (index !== -1) {
+                            // If value exists, remove it from the array
+                            selectedList.splice(index, 1);
+                        }
                         updateCartTotal();
+                        console.log(selectedList)
                     })
                 });
-                
+
                 let itemId;
                 function updateCartTotal() {
                     totalCount = 0;
                     cartTotal = 0;
 
 
-                    // document.querySelectorAll('.count-items').forEach(function (countInput) {
-                    //     let count = parseInt(countInput.value);
-                    //     let itemPrice = parseFloat(countInput.closest('.food-item').querySelector('.total_amount').textContent.replace(/[^\d.]/g, ''));
-                    //     totalCount += count;
-                    //     console.log(item.price)
-                    //     cartTotal += count * itemPrice;
-                    // });
-                    document.querySelectorAll('.count-items').forEach(function(countInput)
-                {
-                    
-                    itemId=countInput.closest('.food-item').id;
-                    console.log(itemId+"set")
-                    document.getElementById(itemId).addEventListener('click',function()
-                {
-                    console.log("working plus function")
-                    let itemPrice = parseFloat(countInput.closest('.food-item').querySelector('.total_amount').textContent.replace(/[^\d.]/g, ''));
+                    document.querySelectorAll('.count-items').forEach(function (countInput) {
+                        console.log("working check")
+                        let count = parseInt(countInput.value);
+                        let itemPrice = parseFloat(countInput.closest('.food-item').querySelector('.total_amount').textContent.replace(/[^\d.]/g, ''));
                         totalCount += count;
                         console.log(item.price)
                         cartTotal += count * itemPrice;
-                })
-                })
+                    });
+                    //     document.querySelectorAll('.count-items').forEach(function(countInput)
+                    // {
+
+                    //     itemId=countInput.closest('.food-item').id;
+                    //     console.log(itemId+"set")
+                    //     document.getElementById(itemId).addEventListener('click',function()
+                    // {
+                    //     console.log("working plus function")
+                    //     let itemPrice = parseFloat(countInput.closest('.food-item').querySelector('.total_amount').textContent.replace(/[^\d.]/g, ''));
+                    //         totalCount += count;
+                    //         console.log(item.price)
+                    //         cartTotal += count * itemPrice;
+                    // })
+                    // })
+                    // for( listItem of selectedList){
+                    //     document.getElementById(listItem).addEventListener('click',function(){
+                    //         console.log("working plus function")
+                    //     })
+                    // }
 
                     document.getElementById('totalCount').textContent = "(" + totalCount + ")";
                     document.getElementById('cart-total').textContent = "₹" + cartTotal;
@@ -399,10 +546,10 @@ function displayItems(items, containerId) {
 
 //   document.addEventListener('DOMContentLoaded', fetchData);
 
-function removeItem(id){
+function removeItem(id) {
     // document.getElementById(id);
     console.log(id)
-    document.getElementById(id).textContent='';
+    document.getElementById(id).textContent = '';
     console.log("click worked")
     console.log(document.getElementById(id))
 }

@@ -1,11 +1,31 @@
 body{
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+header{
+    background-color: #434655;
+    color: white;
+    position: fixed;
+    z-index: 5;
+    width: 100%;
+    height: 90px;
+}
+
+.header-span{
+    display: flex;
+    align-items: center;
+}
+
+.header-span h4{
+    margin-left:28%;
+    margin-top: 1%;
+}
 .container{
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin-left: 5%;
+    padding-top: 90px;
+    
 }
 
 .container .tick{
@@ -13,6 +33,7 @@ body{
     width: 6em;
     align-self: center;
     padding-top: 2%;
+
 
 }
 
@@ -59,6 +80,7 @@ body{
     width: 50%;
     margin-left: 27%;
     border-radius: 10px;
+    margin-bottom: 90px;
 }
 
 #delivery-info div{
@@ -66,3 +88,22 @@ body{
 }
 
 
+footer {
+    background-color: #434655;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    z-index: 1;
+  }
+  footer p{
+    margin: 1%;
+  }
+
+#total-count, #total-price{
+    font-size: 16px;
+    font-weight: 500px !important;
+}

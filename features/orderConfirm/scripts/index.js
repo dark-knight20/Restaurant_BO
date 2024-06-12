@@ -71,16 +71,20 @@ document.addEventListener('DOMContentLoaded', displayOrderDetails);
 document.addEventListener('DOMContentLoaded', async function () {
     const deliveryUsername = document.getElementById('delivery-username');
     const deliveryAddress = document.getElementById('delivery-address');
+    const deliveryPhone=document.getElementById('delivery-phone');
 
     // Get the current user information from localStorage
     const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+    console.log(currentUser)
     if (currentUser) {
         deliveryUsername.textContent = `Name: ${currentUser.username}`;
         deliveryAddress.textContent = `Address: ${currentUser.address}`;
+        deliveryPhone.textContent=`Phone Number: ${currentUser.phone_no}`;
+
     } else {
         deliveryUsername.textContent = 'No user information found. Please log in.';
         deliveryAddress.textContent = '';
     }
 
-   
+
 });

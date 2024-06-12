@@ -4,13 +4,13 @@ function checkUser() {
     credentials=JSON.parse(localStorage.getItem('credentials'));
     console.log(credentials)
     for (user of credentials['users']) {
+        console.log(user)
         console.log(user.username);
         if (document.getElementById('username').value === user.username) {
             if (document.getElementById('password').value === user.password) {
                 res = true;
                 console.log("logged in successfully");
-                localStorage.setItem('currentUser',user.username);
-                localStorage.setItem('currentUser', JSON.stringify(user));
+                localStorage.setItem('currentUser',JSON.stringify(user));
                 window.location.href = '../restaurantHome/index.html';
                 break;
             }

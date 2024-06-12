@@ -323,4 +323,7 @@ footer p{
   }
   
   
-  
+  .scrolable{
+    overflow-y: scroll;
+      height: 400px;
+  }
