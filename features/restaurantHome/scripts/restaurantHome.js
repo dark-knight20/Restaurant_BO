@@ -65,6 +65,8 @@ function openCart() {
 let totalCount = 0;
 let cartTotal = 0;
 function displayCartItems() {
+    totalCount = 0;
+    cartTotal = 0;
     const cartItemContainer = document.getElementById('cartList');
 
     cartItemContainer.innerHTML = "";

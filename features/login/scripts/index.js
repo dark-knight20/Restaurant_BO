@@ -1,17 +1,14 @@
 function checkUser() {
     let res = false;
     console.log("user authentication triggered");
-    credentials=JSON.parse(localStorage.getItem('credentials'));
-    console.log(credentials)
+    credentials=localStorage.getItem('credentials');
     for (user of credentials['users']) {
         console.log(user.username);
         if (document.getElementById('username').value === user.username) {
             if (document.getElementById('password').value === user.password) {
                 res = true;
                 console.log("logged in successfully");
-                localStorage.setItem('currentUser',user.username);
-                localStorage.setItem('currentUser', JSON.stringify(user));
-                window.location.href = '../restaurantHome/index.html';
+                window.location.href = 'restaurantHome.html';
                 break;
             }
             else {
