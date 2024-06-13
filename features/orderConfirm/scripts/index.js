@@ -21,9 +21,8 @@ async function displayOrderDetails() {
     const orderDetailsContainer = document.getElementById('order-details');
     const totalCountElement = document.getElementById('total-count');
     const totalPriceElement = document.getElementById('total-price');
-
     const currentOrderJSON = localStorage.getItem('currentOrder');
-    console.log(currentOrderJSON)
+
     if (!currentOrderJSON) {
         orderDetailsContainer.innerHTML = '<p>No order found.</p>';
         return;
@@ -35,6 +34,7 @@ async function displayOrderDetails() {
     const totalPrize = currentOrder.totalPrize;
 
     const data = await fetchData();
+
     if (!data) {
         orderDetailsContainer.innerHTML = '<p>Error loading order details.</p>';
         return;
@@ -45,7 +45,6 @@ async function displayOrderDetails() {
         if (itemDetails) {
             const itemDiv = document.createElement('div');
             itemDiv.classList.add('order-item');
-
             itemDiv.innerHTML = `
                 <img src="${itemDetails.image}" alt="${itemDetails.title}" class="order-item-image">
                 <div class="order-item-details">
@@ -54,19 +53,16 @@ async function displayOrderDetails() {
                     <p class="order-item-price">Price: ₹${itemDetails.price}</p>
                 </div>
             `;
-
             orderDetailsContainer.appendChild(itemDiv);
         } else {
             console.error(`Item details for item with id ${item.id} could not be found.`);
         }
     }
-
     totalCountElement.textContent = `Total Items: ${totalCount}`;
     totalPriceElement.textContent = `Total Price: ₹${totalPrize}`;
 }
 
 document.addEventListener('DOMContentLoaded', displayOrderDetails);
-
 
 document.addEventListener('DOMContentLoaded', async function () {
     const deliveryUsername = document.getElementById('delivery-username');
@@ -75,7 +71,7 @@ document.addEventListener('DOMContentLoaded', async function () {
 
     // Get the current user information from localStorage
     const currentUser = JSON.parse(localStorage.getItem('currentUser'));
-    console.log(currentUser)
+    
     if (currentUser) {
         deliveryUsername.textContent = `Name: ${currentUser.username}`;
         deliveryAddress.textContent = `Address: ${currentUser.address}`;
@@ -85,6 +81,4 @@ document.addEventListener('DOMContentLoaded', async function () {
         deliveryUsername.textContent = 'No user information found. Please log in.';
         deliveryAddress.textContent = '';
     }
-
-
 });
